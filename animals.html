@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!-- Load React. -->
+    <script src="https://unpkg.com/react@17/umd/react.production.min.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js" crossorigin></script>
+    
+    <head>
+        <form>
+            <select name="list" id="list" class="navbutton" accesskey="target">
+                <option value='none' class="navbutton" selected>Select page</option>
+                <option value="main.html"class="navbutton" >Main page</option>
+                <option value="dinos.html" class="navbutton">dinos</option>
+                <option value="animals.html"class="navbutton" >animals</option>
+            </select>
+            <input type=button class="navbutton" value="Go" onclick="goToNewPage()" />
+            </form>
+            <script type="text/javascript">
+                function goToNewPage()
+                {
+                    var url = document.getElementById('list').value;
+                    if(url != 'none') {
+                        window.location = url;
+                    }
+                }
+            </script> 
+        <title>Teodoras drawings Web Page</title>
+        <div class="row">
+            <div class="column">
+              <img src="koli.jpg" alt = "animal"style="width:100%">
+              <div class="text">Kolibri</div>
+            </div>
+            <div class="column">
+              <img src="ara.jpg"alt = "animal" style="width:100%">
+              <div class="text">Ara</div>
+            </div>
+            <div class="column">
+              <img src="rab.jpg" alt = "animal" style="width:100%">
+              <div class="text">Rabbit</div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="column">
+              <img src="ping.jpg" alt = "animal" style="width:100%">
+              <div class="text">Pinguin</div>
+            </div>
+            <div class="column">
+              <img src="flm.jpg"  alt = "animal"style="width:100%">
+              <div class="text">Flamingo</div>
+            </div>
+            <div class="column">
+              <img src="owl.jpg" alt = "animal" style="width:100%">
+              <div class="text">Arctik Owl</div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="column">
+              <img src="girf.jpg" alt = "animal" style="width:100%">
+              <div class="text">Giraffe</div>
+            </div>
+            <div class="column">
+              <img src="cat.jpg" alt = "animal" style="width:100%">
+              <div class="text">Cat</div>
+            </div>
+            <div class="column">
+              <img src="artfox.jpg" alt = "animal" style="width:100%">
+              <div class="text">Arctik Fox</div>
+            </div>
+          </div>
+         
+        <div class="like_button_container" data-commentid="1"></div>
+        <div id="like_button_container"></div>
+         <!-- Load our React component. -->
+    <script src="like_button.js"></script>
+    <link rel="stylesheet" href="styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <div id="like_button_container"></div>
+       <!-- We will put our React component inside this div. -->
+       <div class="like_button_container" data-commentid="1"></div>
+        <p>
+            <body>
+               
+                <input type="text" id="comment-box" placeholder="Enter comment">
+                <button id="post" >Post</button>
+                <ul id="unordered">
+                     </ul>   
+          <script src="code.js"></script>
+
+         </p> 
+    </head> 
+   
+</html>

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+   <!-- Load React. -->
+    <script src="https://unpkg.com/react@17/umd/react.production.min.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js" crossorigin></script>
+    <head>
+      <title>Teodoras drawings Web Page</title>
+        <form>
+            <select name="list" id="list" class="navbutton" accesskey="target">
+                <option value='none' selected>Select page  </option>
+                <option value="main.html"class="navbutton">Main page</option>
+                <option value="dinos.html"class="navbutton">dinos</option>
+                <option value="animals.html"class="navbutton">animals</option>
+            </select>
+            <input type=button class="navbutton" value="Go" onclick="goToNewPage()" />
+            </form>
+            <script type="text/javascript">
+                function goToNewPage()
+                {
+                    var url = document.getElementById('list').value;
+                    if(url != 'none') {
+                        window.location = url;
+                    }
+                }
+            </script> 
+        <div class="slideshow-container">
+
+            <div class="mySlides fade">
+              <div class="numbertext">1 / 3</div>
+              <img src="stego.jpg"alt="Dino" style="width:1000px;height:600px">
+              <div class="text">Stegosaurus</div>
+            </div>
+            
+            <div class="mySlides fade">
+              <div class="numbertext">2 / 3</div>
+              <img src="moss.jpg" alt="Dino" style="width:1000px;height:600px">
+              <div class="text">Mossasaurus</div>
+            </div>
+            
+            <div class="mySlides fade">
+              <div class="numbertext">3 / 3</div>
+              <img src="spino.jpg" alt="Dino" style="width:1000px;height:600px">
+              <div class="text">Spinosaurus</div>
+            </div>
+            
+            </div>
+            <br>
+            
+            <div style="text-align:center">
+              <span class="dot"></span> 
+              <span class="dot"></span> 
+              <span class="dot"></span> 
+            </div>
+            
+            <script>
+            var slideIndex = 0;
+            showSlides();
+            
+            function showSlides() {
+              var i;
+              var slides = document.getElementsByClassName("mySlides");
+              var dots = document.getElementsByClassName("dot");
+              for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  
+              }
+              slideIndex++;
+              if (slideIndex > slides.length) {slideIndex = 1}    
+              for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+              }
+              slides[slideIndex-1].style.display = "block";  
+              dots[slideIndex-1].className += " active";
+              setTimeout(showSlides, 5000); // Change image every 5 seconds
+            }
+            </script>
+            
+            <a href="https://sv.wikipedia.org/wiki/Spinosaurus">    
+        <img src="spino.jpg" alt="spino" class="center"style="width:1000px;height:600px; ">
+        <div class="text">Spinosaurus</div>
+      </a> >
+      <a href="https://sv.wikipedia.org/wiki/Mosasaurus">
+        <img src="moss.jpg" class="center"style="width:1000px;height:600px;" >
+        <div class="text">Mossasaurus</div>
+      </a>
+      <a href="https://sv.wikipedia.org/wiki/Stegosaurus">
+        <img src="stego.jpg" class="center"style="width:1000px;height:600px;" >
+        <div class="text">Stegosaurus</div>
+      </a>
+
+        <div class="like_button_container" data-commentid="1"></div>
+        <div id="like_button_container"></div>
+         <!-- Load our React component. -->
+    <script src="like_button.js"></script>
+    <link rel="stylesheet" href="styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <div id="like_button_container"></div>
+        <p>
+            
+            <head>
+                <meta charset="UTF-8">
+                <meta http-equiv="X-UA-Compatible" content="IE=edge">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <link rel="stylesheet" href="style.css">
+            </head>
+            <body>
+               
+                <input type="text" id="comment-box" placeholder="Enter comment">
+                <button id="post">Post</button>
+                <ul id="unordered">
+                   
+               </ul>
+
+               
+                <script src="code.js"></script>
+            </body>  
+            
+        </p>
+    </head>
+</html>
+
